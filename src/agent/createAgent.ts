@@ -3,6 +3,7 @@ import { ChatOpenAI } from "@langchain/openai";
 
 import { calculatorTool } from "../tools/calculator";
 import { webSearchTool } from "../tools/webSearch";
+import { knowledgeBaseTool } from "../tools/knowledgeBase";
 
 export function buildAgent() {
   const model = new ChatOpenAI({
@@ -10,7 +11,7 @@ export function buildAgent() {
     temperature: 0,
   });
 
-  const tools = [calculatorTool, webSearchTool];
+  const tools = [calculatorTool, webSearchTool, knowledgeBaseTool];
 
   const agent = createAgent({
     model,
