@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multi-Tool AI Agent</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 16px;
+      }
+
+      h1 {
+        margin-bottom: 8px;
+      }
+
+      #chat {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 16px;
+        min-height: 400px;
+        margin-bottom: 16px;
+        background: #fafafa;
+        overflow-y: auto;
+      }
+
+      .message {
+        margin-bottom: 12px;
+        padding: 10px 12px;
+        border-radius: 8px;
+      }
+
+      .user {
+        background: #e8f0fe;
+      }
+
+      .assistant {
+        background: #f1f3f4;
+      }
+
+      .row {
+        display: flex;
+        gap: 8px;
+      }
+
+      input {
+        flex: 1;
+        padding: 12px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 12px 16px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Multi-Tool AI Agent</h1>
+    <p>Ask math questions, web questions, or questions about your RAG docs.</p>
+
+    <div id="chat"></div>
+
+    <div class="row">
+      <input id="messageInput" type="text" placeholder="Type your message..." />
+      <button id="sendButton">Send</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
